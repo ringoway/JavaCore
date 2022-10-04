@@ -9,6 +9,11 @@ public class Main {
         list.add("hi");
         list.add(303);
         System.out.println(list);
+
+        List animals = new ArrayList();
+        animals.add("frog");
+        animals.add("dog");
+        animals.add("bird");
     }
 }
 
