@@ -1,21 +1,13 @@
 package Exceptions.Throw;
 
-import java.io.IOException;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while(true) {
-            int x = Integer.parseInt(scanner.nextLine());
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("adw");
+        Scanner scan = new Scanner(file);
 
-            if(x != 0) {
-                try {
-                    throw new IOException();
-                } catch (IOException e) {
-                    System.out.println("Пользователь ввел что-то кроме 0");
-                }
-            }
-        }
     }
 }
