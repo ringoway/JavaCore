@@ -12,10 +12,18 @@ public class Main5 {
         } catch (IOException | IllegalAccessException | ParseException e) { //multi catch
             throw new RuntimeException(e);
         }
+        try {
+            start();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } //все следующие catch если обработаются, то дальше идти не будет.
 
 
     }
     public static void run()throws IOException, ParseException, IllegalAccessException {
+
+    }
+    public static void start()throws IOException, ParseException, IllegalAccessException {
 
     }
 }
