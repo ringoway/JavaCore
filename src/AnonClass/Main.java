@@ -1,16 +1,16 @@
 package AnonClass;
 
+interface AbleToEat {
+    public void eat();
+}
 public class Main {
     public static void main(String[] args) {
-        Animal animal = new Animal();
-        animal.eat();
-
-
-        Animal animal1 = new Animal(){
-            public void eat(){
-                System.out.println("Animal1 is eating");
+        AbleToEat ableToEat = new AbleToEat() {
+            @Override
+            public void eat() {
+                System.out.println("someone is Eating");
             }
         };
-        animal1.eat();
+        ableToEat.eat();
     }
 }
