@@ -2,6 +2,7 @@ package ReadingFromFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -16,5 +17,21 @@ public class Main {
             System.out.println(scanner.nextLine());
         }
         scanner.close();
+        ///////////
+        String path1 = separator+"Users"+separator+"azat"+separator+"Desktop"+separator+"ReadInt.txt";
+        File file1 = new File(path1);
+
+        Scanner scanner1 = new Scanner(file1);
+        String line = scanner1.nextLine();
+        String[] numbersString = line.split(" ");
+
+        int [] numbers = new int[3];
+        int counter = 0;
+        for(String number: numbersString){
+            numbers[counter++] =Integer.parseInt(number);
+        }
+        System.out.println(Arrays.toString(numbersString));
+        scanner.close();
+
     }
 }
