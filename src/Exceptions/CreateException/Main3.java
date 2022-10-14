@@ -1,7 +1,7 @@
 package Exceptions.CreateException;
 import java.util.Scanner;
 
-public class Main {
+public class Main3 {
     public static void main(String[] args) throws ScannerException {
         Scanner scanner = new Scanner(System.in);
         while(true) {
