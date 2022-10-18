@@ -13,6 +13,7 @@ public class ReadObject { //считывание
 
             System.out.println(person1);
             System.out.println(person2);
+            ois.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
