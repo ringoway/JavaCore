@@ -3,7 +3,7 @@ package ComparatorAndComparable;
 import java.util.Comparator;
 import java.util.Random;
 
-public class Message{
+public class Message implements Comparator<Message>{
     private String message;
     private int id;
 
@@ -23,5 +23,8 @@ public class Message{
         return "<" + id + "> " + message;
     }
 
-
+    @Override
+    public int compare(Message o1, Message o2) {
+        return o1.getMessage().compareTo(o2.getMessage());
+    }
 }
