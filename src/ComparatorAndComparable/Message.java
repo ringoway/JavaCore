@@ -4,10 +4,12 @@ import java.util.Comparator;
 import java.util.Random;
 
 public class Message implements Comparator<Message>{
+    private String name;
     private String message;
     private int id;
 
-    public Message(String message){
+    public Message(String name, String message){
+        this.name = name;
         this.message = message;
         this.id = new Random().nextInt(10000);
     }
@@ -16,11 +18,15 @@ public class Message implements Comparator<Message>{
         return message;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getId() {
         return id;
     }
     public String toString(){
-        return "<" + id + "> " + message;
+        return "<" + id + "> " + name +" send: "+message;
     }
 
     @Override
